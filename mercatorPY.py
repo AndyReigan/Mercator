@@ -67,14 +67,14 @@ def utmToLatLon(x, y, utmz, north):
     phi = phi + pow(D, 6) * (61 + 90 * T1 + 298 * C1 + 45 * T1 * T1 - 252 * e0sq - 3 * C1 * C1) / 720
     phi = phi1 - (N1 * math.tan(phi1) / R1) * phi
     # Output Latitude:
-    outLat = math.floor(1000000 * phi / drad) / 1000000;
+    outLat = math.floor(1000000 * phi / drad) / 1000000
 
     lng = D * (1 + D * D * ((-1 - 2 * T1 - C1) / 6 + D * D * (
-            5 - 2 * C1 + 28 * T1 - 3 * C1 * C1 + 8 * e0sq + 24 * T1 * T1) / 120)) / math.cos(phi1);
+            5 - 2 * C1 + 28 * T1 - 3 * C1 * C1 + 8 * e0sq + 24 * T1 * T1) / 120)) / math.cos(phi1)
     lngd = zcm + lng / drad
 
     # Output Longitude:
-    outLon = math.floor(1000000 * lngd) / 1000000;
+    outLon = math.floor(1000000 * lngd) / 1000000
 
     return [outLat, outLon]
 
