@@ -77,5 +77,5 @@ def utmToLatLon(x, y, utmz, north):
     outLon = math.floor(1000000 * lngd) / 1000000
 
     return [outLat, outLon]
-2
+21
 print(utmToLatLon(269417.13, 1751581.85, 32, True))
