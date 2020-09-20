@@ -1,0 +1,43 @@
+@startuml pavlov
+
+
+object User
+User : manageType
+User : name
+User : ResonNumber
+
+
+
+object client
+client : name 
+client : region
+client : filial
+client : clientID 
+
+
+
+object contacts
+contacts : name
+contacts : mob_phone
+contacts : work_phone
+contacts : mail
+
+
+object clientInfo
+clientInfo : inn
+clientInfo : kpp
+clientInfo : segment
+clientInfo : makkinzi_seg
+clientInfo : businessType
+clientInfo : fieldsOfActivity
+clientInfo : activeSubscrib
+clientInfo : marketSegment
+clientInfo : initialSegment
+clientInfo : avgRevenue
+clientInfo : accountsCount
+
+client <|-- User 
+clientInfo <|-- client
+contacts <|-- client 
+
+@enduml
